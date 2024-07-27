@@ -807,6 +807,11 @@ h6 {
     opacity: 0;
     pointer-events: none;
     visibility: hidden;
+
+
+    opacity: 1;
+    pointer-events: auto;
+    visibility: visible;
 }
 
 .is-open {
@@ -817,8 +822,10 @@ h6 {
 
 .modal {
     position: absolute;
-    width: 408px;
-    min-height: 584px;
+    /* width: 408px;
+    min-height: 584px; */
+    width: 288px;
+    max-height: 623px;
     background: #fcfcfc;
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14),
         0px 1px 3px rgba(0, 0, 0, 0.12),
@@ -990,6 +997,7 @@ h6 {
 
 .privacy-policy-text {
     margin-bottom: 24px;
+    display: flex;
 }
 
 
