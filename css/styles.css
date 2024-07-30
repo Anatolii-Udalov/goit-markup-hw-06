@@ -1011,7 +1011,7 @@ h6 {
 }
 
 
-.label-policy span {
+.span-label-user {
     width: 16px;
     height: 16px;
     border: 1px solid rgba(46, 47, 66, 0.4);
@@ -1028,11 +1028,12 @@ h6 {
     flex-shrink: 0;
 }
 
-.visually-hidden:checked+.label-policy span {
+.visually-hidden:checked+.label-policy span:first-child {
     background-color: #404bbf;
     fill: #f4f4fd;
     border: none;
 }
+
 
 /* -------------- media 768px -------------- */
 @media screen and (min-width: 768px) {
