@@ -133,7 +133,6 @@ h6 {
     line-height: 1.5;
     letter-spacing: 0.02em;
     color: #434455;
-    padding: 24px 0;
     transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -178,6 +177,7 @@ h6 {
     opacity: 0;
     pointer-events: none;
     visibility: hidden;
+    overflow: auto;
 
     transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -280,23 +280,28 @@ h6 {
 /* -------------- -------------- */
 
 /* -------------- Hero -------------- */
+
 .hero {
-    background-image: linear-gradient(180deg, rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/hero/Dark-bg-mob.jpg);
-    min-width: 320px;
+    background-image: linear-gradient(rgba(46, 47, 66, 0.7),
+            rgba(46, 47, 66, 0.7)),
+        url(../images/hero/Dark-bg-mob.jpg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    padding: 188px 0;
+    /* padding: 188px 0; */
+    padding: 72px 0;
     margin: 0 auto;
+    height: 432px;
+    /* max-width: 1440px; */
 }
 
-@media screen and (-webkit-min-device-pixel-raito: 2),
+@media screen and (-webkit-min-device-pixel-ratio: 2),
 (min-resolution: 2dppx),
 (min-resolution: 192dpi) {
     .hero {
-        background-image: linear-gradient(180deg, rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
-            url(../images/Dark-bg-mob2x.jpg);
-        ;
+        background-image: linear-gradient(rgba(46, 47, 66, 0.7),
+                rgba(46, 47, 66, 0.7)),
+            url(../images/hero/Dark-bg-mob2x.jpg);
     }
 
 }
@@ -313,7 +318,8 @@ h6 {
     line-height: 1.5;
     letter-spacing: 0.04em;
     color: #ffffff;
-    margin: 48px auto 0;
+    /* margin: 48px auto 0; */
+    margin: 72px auto;
     border-radius: 4px;
     min-width: 169px;
     height: 56px;
@@ -399,7 +405,7 @@ h6 {
     color: #2e2f42; */
     font-weight: 700;
     font-size: 36px;
-    line-height: 1.11111;
+    line-height: 1.1;
     letter-spacing: 0.02em;
     text-align: center;
     color: #2e2f42;
@@ -750,7 +756,7 @@ h6 {
     align-items: center;
     cursor: pointer;
     border: none;
-    transition: bacground-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .subscribe-button-footer:active,
@@ -809,9 +815,6 @@ h6 {
     visibility: hidden;
 
 
-    opacity: 1;
-    pointer-events: auto;
-    visibility: visible;
 }
 
 .is-open {
@@ -836,6 +839,7 @@ h6 {
     border-radius: 4px;
     transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
     padding: 72px 24px 24px 24px;
+    overflow: auto;
 }
 
 .icon-close {
@@ -930,6 +934,7 @@ h6 {
 
 .policy-span {
     color: #4d5ae5;
+    text-decoration: underline;
 }
 
 .input-text:focus {
@@ -988,11 +993,16 @@ h6 {
 
 .label-policy {
     font-weight: 400;
-    font-size: 12px;
+    font-size: 11px;
     line-height: 1.17;
     letter-spacing: 0.04em;
     color: #8e8f99;
+    width: 100%;
+    display: flex;
+}
 
+.center-text-policy {
+    display: block;
 }
 
 .privacy-policy-text {
@@ -1009,11 +1019,13 @@ h6 {
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
         border 250ms cubic-bezier(0.4, 0, 0.2, 1),
         fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    fill: transparent;
     display: inline-flex;
     justify-content: center;
     align-items: center;
-    fill: transparent;
     margin-right: 8px;
+    margin-top: 2px;
+    flex-shrink: 0;
 }
 
 .visually-hidden:checked+.label-policy span {
@@ -1023,5 +1035,324 @@ h6 {
 }
 
 /* -------------- media 768px -------------- */
+@media screen and (min-width: 768px) {
+    .container {
+        width: 768px;
+    }
 
-/* -------------- media 1200px -------------- */
+    .header-unnamed-list {
+        display: flex;
+    }
+
+    .header-unnamed-adress {
+        display: block;
+    }
+
+
+    .header-adress-item {
+        font-size: 12px;
+        line-height: 1.6;
+        letter-spacing: 0.04em;
+        padding: 16px 0;
+    }
+
+
+    .group-btn-header {
+        display: none;
+    }
+
+    .modal-group-header {
+        display: none;
+    }
+
+    .hero {
+        background-image: linear-gradient(rgba(46, 47, 66, 0.7),
+                rgba(46, 47, 66, 0.7)),
+            url(../images/hero/Dark-bg-tab.jpg);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        padding: 122px 0;
+        margin: 0 auto;
+        height: 436px;
+
+    }
+
+    @media screen and (-webkit-min-device-pixel-ratio: 2),
+    (min-resolution: 2dppx),
+    (min-resolution: 192dpi) {
+        .hero {
+            background-image: linear-gradient(rgba(46, 47, 66, 0.7),
+                    rgba(46, 47, 66, 0.7)),
+                url(../images/hero/dark-bg-tab2x.jpg);
+        }
+    }
+
+
+    .main-button {
+        margin: 36px auto;
+    }
+
+    .main-title {
+        font-weight: 700;
+        font-size: 56px;
+        line-height: 1.07;
+        letter-spacing: 0.02em;
+        text-align: center;
+        color: #fff;
+        max-width: 496px;
+    }
+
+    /* -------feauters----------- */
+
+    .main-unnamed-list {
+        gap: 72px 24px;
+        flex-wrap: wrap;
+    }
+
+
+    .feauters-list-item {
+        width: calc((100% - 24px) / 2);
+    }
+
+    .main-title-two {
+        text-align: start;
+    }
+
+    /* -------team----------- */
+    .container-our-team {
+        width: 584px;
+
+    }
+
+    .team-unnamed-list {
+        gap: 64px 24px;
+    }
+
+    .team-list-item {
+        width: calc((100% - 24px) / 2);
+    }
+
+    /* -------------- Portfolio -------------- */
+
+    .portfolio-unnamed-list {
+        gap: 72px 24px;
+    }
+
+    .portfolio-list-item {
+        width: calc((100% - 24px) / 2)
+    }
+
+    /* -------------- Footer-------------- */
+    .footer {
+        padding: 90px 0;
+    }
+
+    .footer-logo {
+        display: block;
+    }
+
+    .container-footer {
+        display: flex;
+        align-items: baseline;
+        flex-wrap: wrap;
+        gap: 72px 24px;
+        padding-left: 108px;
+    }
+
+    .social-media-footer {
+        width: 208px;
+    }
+
+    .social-media-text-footer {
+        text-align: start;
+    }
+
+    .title-footer-subscribe {
+        text-align: start;
+    }
+
+    .subscribe-footer {
+        /* padding-left: 92px; */
+        display: block;
+        /* width: 100%; */
+    }
+
+    .subscribe-footer-form {
+        justify-content: start;
+    }
+
+    /* -------------- modal window tab -------------- */
+    .modal {
+        width: 408px;
+        min-height: 584px;
+    }
+
+    .label-policy {
+        display: flex;
+        align-items: center;
+    }
+
+    .label-policy span {
+        margin-top: 0;
+    }
+
+}
+
+/* -------------- media 1158px -------------- */
+@media screen and (min-width: 1158px) {
+    .container {
+        width: 1158px;
+
+    }
+
+    .header-unnamed-adress {
+        display: flex;
+        flex-wrap: nowrap;
+        gap: 40px;
+        align-items: center;
+    }
+
+    .header-adress-item {
+        padding: 24px 0;
+        font-size: 16px;
+        line-height: 1.5;
+        letter-spacing: 0.02em;
+    }
+
+    .hero {
+        background-image: linear-gradient(rgba(46, 47, 66, 0.7),
+                rgba(46, 47, 66, 0.7)),
+            url(../images/hero/people-office.jpg);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        padding: 188px 0;
+        margin: 0 auto;
+        max-width: 1440px;
+        height: 600px;
+    }
+
+    @media screen and (-webkit-min-device-pixel-ratio: 2),
+    (min-resolution: 2dppx),
+    (min-resolution: 192dpi) {
+        .hero {
+            background-image: linear-gradient(rgba(46, 47, 66, 0.7),
+                    rgba(46, 47, 66, 0.7)),
+                url(../images/hero/people-office2x.jpg);
+        }
+
+    }
+
+    .main-button {
+        margin: 48px auto 0;
+    }
+
+    /* -------feauters----------- */
+    .feauters-icon-section {
+        display: flex;
+    }
+
+    .feauters-section {
+        padding: 120px 0;
+    }
+
+    .main-unnamed-list {
+        gap: 24px;
+        flex-wrap: nowrap;
+    }
+
+
+    .featers-list-item {
+        width: calc((100% - 3 * 24px) / 4);
+    }
+
+    .main-title-two {
+        text-align: start;
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 1.2;
+        letter-spacing: 0.02em;
+        color: #2e2f42;
+    }
+
+    .main-text {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 1.5;
+        letter-spacing: 0.02em;
+        color: #434455;
+    }
+
+    /* -------team----------- */
+    .team {
+        padding: 120px 0;
+    }
+
+    .team-unnamed-list {
+        gap: 24px;
+    }
+
+    .team-list-item {
+        width: calc((100% - 3 * 24px) / 4);
+    }
+
+    /* -------------- Portfolio -------------- */
+
+    .portfolio {
+        padding: 120px 0;
+    }
+
+    .portfolio-unnamed-list {
+        gap: 48px 24px;
+    }
+
+    .portfolio-list-item {
+        width: calc((100% - 48px) / 3);
+    }
+
+    /* -------------- Footer-------------- */
+    .footer {
+        padding: 100px 0;
+    }
+
+    .container-footer {
+        display: flex;
+        flex-wrap: nowrap;
+        padding-left: 16px;
+        gap: 0;
+    }
+
+    .footer-logo {
+        display: inline-block;
+    }
+
+    .footer-right-block {
+        display: inline-block;
+        margin-right: 120px;
+    }
+
+    .subscribe-footer {
+        margin-left: auto;
+        width: 456px;
+    }
+
+    .footer-subscreibe-input {
+        border: 1px solid #fff;
+        width: 264px;
+    }
+
+
+
+    /* -----------modal windows----------- */
+    .modal {
+        width: 408px;
+        min-height: 584px
+    }
+
+
+
+
+
+
+}

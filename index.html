@@ -42,7 +42,7 @@
         </nav>
         <address class="header-adress">
           <ul class="header-unnamed-adress">
-            <li class="header-adress-item">
+            <li class="header-adress-list">
               <a
                 class="header-adress-item"
                 href="mailto:info@devstudio.com"
@@ -211,13 +211,14 @@
           </ul>
         </div>
       </section>
-      <section class="team">
-        <div class="container container-our-team">
+      <section class="team ">
+        <div class="container  container-our-team">
           <h2 class="team-title">Our Team</h2>
           <ul class="team-unnamed-list">
             <li class="team-list-item">
-              <picture>
+              <picture class="">
                 <source
+                width="264px"
                 srcset="./images/team/img-3.jpg 1x,
                 ./images/team/imgx2.jpg 2x" 
                 />
@@ -655,7 +656,7 @@
     </main>
      <footer class="footer">
       <div class="container-footer container">
-        <div class="footer-right-block">
+        <div class="footer-right-block ">
           <a class="footer-logo" href="./index.html"
             >Web<span class="footer-logo-color">Studio</span></a
           >
@@ -705,7 +706,7 @@
               </a>
             </li>
           </ul>
-        </div>
+      </div>
         <div class="subscribe-footer">
           <p class="title-footer-subscribe">Subscribe</p>
           <form class="subscribe-footer-form">
@@ -800,9 +801,9 @@
               <span class="span-label-user"
                 ><svg height="8" width="10">
                   <use href="./images/icons.svg#icon-active"></use></svg></span
-              >I accept the terms and conditions of the
+              ><div class="center-text-policy">I accept the terms and conditions of the
               <a class="policy-span" href="">Privacy Policy</a></label
-            >
+            ></div>
           </div>
           <button type="submit" class="button-send">Send</button>
         </form>
