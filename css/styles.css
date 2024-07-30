@@ -74,7 +74,7 @@ h6 {
     letter-spacing: 0.03em;
     text-transform: uppercase;
     color: #4d5ae5;
-    margin-right: 76px
+    /* margin-right: 76px */
 }
 
 .logo-color {
@@ -159,6 +159,8 @@ h6 {
     width: 24px;
     border: none;
     display: block;
+    padding: 0;
+    background-color: transparent;
 }
 
 /* -------------- -------------- */
@@ -166,6 +168,9 @@ h6 {
 .header-modal-window {
     position: fixed;
 
+
+    display: flex;
+    flex-direction: column;
     z-index: 999;
     width: 100%;
     height: 100%;
@@ -203,6 +208,10 @@ h6 {
     margin-bottom: 40px;
 }
 
+.header-navigation-pannel {
+    margin-bottom: auto;
+}
+
 .header-navigation-item-menu {
     font-weight: 700;
     font-size: 36px;
@@ -213,9 +222,6 @@ h6 {
     transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.header-unnamed-adress-menu {
-    margin-top: 168px;
-}
 
 .header-adress-item-menu {
     margin-bottom: 24px;
@@ -225,6 +231,10 @@ h6 {
     letter-spacing: 0.02em;
     color: #4d5ae5;
     transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.header-adress-menu {
+    font-style: normal;
 }
 
 .header-menu {
@@ -274,7 +284,6 @@ h6 {
 
 .icons-soc-media-header {
     fill: #f4f4fd;
-    ;
 }
 
 /* -------------- -------------- */
@@ -291,8 +300,7 @@ h6 {
     /* padding: 188px 0; */
     padding: 72px 0;
     margin: 0 auto;
-    height: 432px;
-    /* max-width: 1440px; */
+    max-width: 320px;
 }
 
 @media screen and (-webkit-min-device-pixel-ratio: 2),
@@ -319,7 +327,7 @@ h6 {
     letter-spacing: 0.04em;
     color: #ffffff;
     /* margin: 48px auto 0; */
-    margin: 72px auto;
+    margin: 72px auto 0;
     border-radius: 4px;
     min-width: 169px;
     height: 56px;
@@ -534,7 +542,7 @@ h6 {
 
 
 .portfolio-title {
-    font-weight: 500;
+    font-weight: 700;
     font-size: 36px;
     line-height: 1.11;
     text-align: center;
@@ -651,7 +659,6 @@ h6 {
     letter-spacing: 0.02em;
     color: #f4f4fd;
     max-width: 288px;
-    margin-bottom: 72px;
 }
 
 .container-footer {
@@ -660,10 +667,11 @@ h6 {
     align-items: baseline;
 }
 
-/* .footer-right-block {
-     display: inline; 
- margin-right: 120px; 
-} */
+.footer-right-block {
+    /* display: inline; 
+ margin-right: 120px;  */
+    margin-bottom: 72px;
+}
 
 .social-media-footer {
     display: inline-block;
@@ -838,7 +846,7 @@ h6 {
     transform: translate(-50%, -50%);
     border-radius: 4px;
     transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
-    padding: 72px 24px 24px 24px;
+    padding: 72px 16px 24px 16px;
     overflow: auto;
 }
 
@@ -1054,9 +1062,15 @@ h6 {
         font-size: 12px;
         line-height: 1.6;
         letter-spacing: 0.04em;
-        padding: 16px 0;
     }
 
+    .header-unnamed-adress:not(:last-child) {
+        margin: 8px 0;
+    }
+
+    .header-navigation-logo {
+        margin-right: 76px;
+    }
 
     .group-btn-header {
         display: none;
@@ -1075,8 +1089,7 @@ h6 {
         background-size: cover;
         padding: 122px 0;
         margin: 0 auto;
-        height: 436px;
-
+        max-width: 768px;
     }
 
     @media screen and (-webkit-min-device-pixel-ratio: 2),
@@ -1091,7 +1104,7 @@ h6 {
 
 
     .main-button {
-        margin: 36px auto;
+        margin: 36px auto 0;
     }
 
     .main-title {
@@ -1144,6 +1157,10 @@ h6 {
         width: calc((100% - 24px) / 2)
     }
 
+    .portfolio-title {
+        font-weight: 500;
+    }
+
     /* -------------- Footer-------------- */
     .footer {
         padding: 90px 0;
@@ -1163,6 +1180,12 @@ h6 {
 
     .social-media-footer {
         width: 208px;
+        margin-bottom: 0;
+    }
+
+    .footer-right-block {
+        margin-bottom: 0;
+        width: 264px;
     }
 
     .social-media-text-footer {
@@ -1183,10 +1206,15 @@ h6 {
         justify-content: start;
     }
 
+    .footer-subscreibe-input {
+        width: 264px;
+    }
+
     /* -------------- modal window tab -------------- */
     .modal {
         width: 408px;
         min-height: 584px;
+        padding: 72px 24px 24px 24px;
     }
 
     .label-policy {
@@ -1204,6 +1232,7 @@ h6 {
 @media screen and (min-width: 1158px) {
     .container {
         width: 1158px;
+        padding: 0 15px;
 
     }
 
@@ -1231,7 +1260,6 @@ h6 {
         padding: 188px 0;
         margin: 0 auto;
         max-width: 1440px;
-        height: 600px;
     }
 
     @media screen and (-webkit-min-device-pixel-ratio: 2),
@@ -1340,7 +1368,6 @@ h6 {
 
     .footer-subscreibe-input {
         border: 1px solid #fff;
-        width: 264px;
     }
 
 
